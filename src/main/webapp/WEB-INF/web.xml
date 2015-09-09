@@ -4,4 +4,32 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
+  <context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:META-INF/spring/application-database.xml
+		</param-value>
+	</context-param>
+	
+	<!-- Creates the Spring Container shared by all Servlets and Filters -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- Handles Spring requests -->
+	<servlet>
+		<servlet-name>pocsportscard</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>WEB-INF/webmvc-config.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>pocsportscard</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+  
 </web-app>

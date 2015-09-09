@@ -11,7 +11,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="USER")
+@Table(name="SPORTS_USER")
 @SequenceGenerator(name="SEQ_USER")
 public class User extends AuditableEntity implements BaseEntity, Serializable{
 
