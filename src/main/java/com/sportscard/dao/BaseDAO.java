@@ -38,5 +38,23 @@ public class BaseDAO {
 			throw new RuntimeException();
 		}
 	}
+	
+	public <T extends BaseEntity> void update(T anyEntity) {
+		try {
+			entityManager.merge(anyEntity);
+		} catch (Exception e) {
+			throw new RuntimeException();
+		}
+	}
+	
+	public <T extends BaseEntity, X extends Long> T findById(Class<? extends T> type, X id)
+	{
+		try{
+			return entityManager.find(type, id);
+		}
+		catch (Exception e) {
+			throw new RuntimeException();
+		}
+	}
 
 }

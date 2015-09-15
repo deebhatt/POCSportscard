@@ -2,8 +2,8 @@ package com.sportscard.Messages;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sportscard.entity.BaseEntity;
-
 
 public class ResponseMessage {
 

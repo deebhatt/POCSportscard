@@ -35,5 +35,4 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
 	
 	<mvc:resources location="/resources/" mapping="/resources/**"/>
 
-
 </beans>
